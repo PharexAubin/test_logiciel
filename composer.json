@@ -1,8 +1,7 @@
 {
     "name": "doctrine/instantiator",
     "description": "project",
-    "type": "project",
-    "license": "AGPL-3.0-only",
+  
     "require": {
         "ext-pdo_sqlite": "*",
         "ext-mbstring": "*",
