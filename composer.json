@@ -1,7 +1,19 @@
 {
-    "name": "doctrine/instantiator",
-    "description": "project",
-  
+    "name": "hp/test_logiciel",
+    "description": "Project Test",
+    "type": "project",
+    "license": "AGPL-3.0-only",
+    "autoload": {
+        "psr-4": {
+            "Hp\\TestLogiciel\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "PharexAubin",
+            "email": "94604216+PharexAubin@users.noreply.github.com"
+        }
+    ],
     "require": {
         "ext-pdo_sqlite": "*",
         "ext-mbstring": "*",
