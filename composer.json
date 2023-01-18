@@ -1,4 +1,7 @@
 {
+    "name": "pasca/test-unitaire",
+    "description": "project",
+    "type": "project",
     "require": {
         "ext-pdo_sqlite": "*",
         "ext-mbstring": "*",
