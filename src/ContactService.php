@@ -11,8 +11,8 @@
 
 require 'invalidInputException.php';
 
-class ContactService{
-    public $pdo;
+class ContactService
+{ public $pdo;
 
     /**
      * ContactService constructor.
