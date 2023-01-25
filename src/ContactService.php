@@ -55,11 +55,11 @@ class ContactService
      * @throws invalidInputException en cas d'erreur de paramètre
      */
     public function searchContact($search)
-        {  if (empty($search)){
+        {  if (empty($search)) {
             throw new invalidInputException('search doit être renseigné');
         }
-        if (!is_string($search))
-        {  throw new invalidInputException('search doit être une chaine de caractères');
+        if (!is_string($search)) {
+            throw new invalidInputException('search doit être une chaine de caractères');
         }
         $req = "SELECT * from contacts where nom like '%" . $search . "%' or prenom like '%" . $search . "%'";
 
@@ -68,8 +68,8 @@ class ContactService
         $row = $res->fetchAll();
 
         // si req ok (!false)
-        if ($res)
-            { return $row;
+        if ($res) {
+            return $row;
         }
     }
 
@@ -81,7 +81,7 @@ class ContactService
         { $req = $this->pdo->query('SELECT * from contacts');
         $row = $req->fetchAll();
         // si req ok (!false)
-        if ($req){
+        if ($req) {
             return $row;
         }
     }
@@ -94,11 +94,11 @@ class ContactService
      * @throws invalidInputException en cas d'erreur de paramètre
      */
     public function createContact($nom, $prenom)
-    {  if (empty($nom) && !is_string($nom)){
+    {  if (empty($nom) && !is_string($nom)) {
             throw new invalidInputException('le nom  doit être renseigné');
         }
-        if (empty($prenom) && !is_string($prenom))
-        { throw new invalidInputException('le prenom doit être renseigné');
+        if (empty($prenom) && !is_string($prenom)) {
+            throw new invalidInputException('le prenom doit être renseigné');
         }
         $stmt = $this->pdo->prepare('INSERT INTO contacts (nom, prenom) VALUES (:nom, :prenom)');
         return $stmt->execute([
@@ -116,8 +116,8 @@ class ContactService
      * @throws invalidInputException en cas d'erreur de paramètre
      */
     public function updateContact($id, $nom, $prenom)
-    {  if (empty($nom) && !is_string($nom))
-        {  throw new invalidInputException('le nom  doit être renseigné');
+    {  if (empty($nom) && !is_string($nom)) {
+        throw new invalidInputException('le nom  doit être renseigné');
         }
 
         if (empty($id))
