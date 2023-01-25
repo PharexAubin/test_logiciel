@@ -13,7 +13,7 @@ use PHPUnit\Framework\TestCase;
 
 use function PHPUnit\Framework\once;
 
-require"src\ContactService.php";
+require_once "src\ContactService.php";
 
 
 /**
