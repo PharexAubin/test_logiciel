@@ -42,8 +42,7 @@ final class ContactServiceIntegrationTest extends TestCase
         $contactService = new ContactService();
         $contactService->createContact("pascal", "victor");
         //du principe que id_pascal=2
-        if($contactService->searchContact(2))
-        {
+        if ($contactService->searchContact(2)) {
             throw new Exception("l'utilisateur a bien ete cree");
         } else {
             throw new Exception("l'utilisateur na pas ete cree");
