@@ -8,6 +8,6 @@
     <log type="coverage-html" target="./coverage" title="My Project Coverage"/>
     <log type="coverage-clover" target="./coverage.clover"/>
     <log type="coverage-crap4j" target="./crap4j.xml"/>
-    <log type="junit" target="./junit.xml"/>
+    <log type="coverage-html" target="./coverage" title="My Project Coverage"/>
   </logging>
 </phpunit>
