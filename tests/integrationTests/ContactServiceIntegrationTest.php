@@ -56,7 +56,9 @@ final class ContactServiceIntegrationTest extends TestCase
     {
         $contactService = new ContactService();
         $contactService->searchContact(2);
-       
+        $this->assertTrue($contactService->searchContact(2) === true);
+
+    }
 
     public function testModifyContact()
     {
@@ -68,6 +70,8 @@ final class ContactServiceIntegrationTest extends TestCase
     {
         $contactService = new ContactService();
         $contactService->deleteContact(2);
+        $this->assertTrue($contactService->deleteContact(2) === true);
+
     }
 
 }
