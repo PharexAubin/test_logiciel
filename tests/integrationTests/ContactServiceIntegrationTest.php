@@ -36,6 +36,7 @@ final class ContactServiceIntegrationTest extends TestCase
     {
         $contactService = new ContactService();
         $contactService->deleteAllContact();
+        $this->assertEquals(0, $contactService->countContacts());
     }
 
 
