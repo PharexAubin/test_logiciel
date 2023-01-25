@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-require 'invalidInputException.php';
+ require_once 'invalidInputException.php';
 
 class ContactService
 { public $pdo;
@@ -31,19 +31,19 @@ class ContactService
      * @throws invalidInputException en cas d'erreur de paramètre
      */
     public function getContact($id)
-        { if (empty($id)){
+        { if (empty($id)) {
             throw new invalidInputException("l'id doit être renseigné");
         }
-        if (!is_numeric($id) || $id < 0)
-            {  throw new invalidInputException("l'id doit être un entier non nul");
+        if (!is_numeric($id) || $id < 0) {
+              throw new invalidInputException("l'id doit être un entier non nul");
         }
         $req = $this->pdo->query('SELECT * from contacts where id =' . $id);
 
         $row = $req->fetchAll();
 
         // si req ok (!false)
-        if ($req) 
-        {   // on renvoie le 1er et seul élément du tableau de résultats
+        if ($req) {
+        // on renvoie le 1er et seul élément du tableau de résultats
             return $row[0];
         }
     }
