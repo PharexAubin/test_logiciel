@@ -36,7 +36,7 @@ class ContactService
     public function getContact($id)
   
         { if (empty($id)) {
-            throw new invalidInputException($message);
+            throw new invalidInputException("l'id doit être renseigné");
         }
         if (!is_numeric($id) || $id < 0) {
               throw new invalidInputException("l'id doit être un entier non nul");
