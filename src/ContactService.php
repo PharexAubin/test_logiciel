@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
- use src\invalidInputException;
+ use InvalidInputException;
  
 
 class ContactService
@@ -33,6 +33,7 @@ class ContactService
      * @return mixed le retour de la requete SQL
      * @throws invalidInputException en cas d'erreur de paramètre
      */
+   
     public function getContact($id)
   
         { if (empty($id)) {

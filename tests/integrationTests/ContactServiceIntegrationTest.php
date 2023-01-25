@@ -12,9 +12,7 @@
 use PHPUnit\Framework\TestCase;
 
 use function PHPUnit\Framework\once;
-
-use src\ContactService;
-
+require_once "src\ContactService.php";
 
 /**
  * * @covers invalidInputException
