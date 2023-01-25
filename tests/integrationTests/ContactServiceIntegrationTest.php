@@ -23,7 +23,8 @@ final class ContactServiceIntegrationTest extends TestCase
 {
     private $contactService;
 
-    public function __construct(string $name = null, array $data = [], $dataName = '') {
+    public function __construct(string $name = null, array $data = [], $dataName = '')
+    {
         parent::__construct($name, $data, $dataName);
         $this->contactService = new ContactService();
     }
@@ -39,7 +40,7 @@ final class ContactServiceIntegrationTest extends TestCase
     public function testCreationContact()
     {
         $contactService = new ContactService();
-        $contactService->createContact("pascal","victor");
+        $contactService->createContact("pascal", "victor");
         //du principe que id_pascal=2
         if($contactService->searchContact(2))
         {
@@ -60,7 +61,7 @@ final class ContactServiceIntegrationTest extends TestCase
     public function testModifyContact()
     {
         $contactService = new ContactService();
-        $contactService->createContact(2,"pascal","victor");
+        $contactService->createContact(2, "pascal", "victor");
     }
 
     public function testDeleteContact()
