@@ -145,7 +145,7 @@ class ContactService
      * @throws invalidInputException en cas d'erreur de paramètre
      */
     public function deleteContact($id)
-    {  if (null === $id){
+    {  if (null === $id) {
             throw new invalidInputException("l'id doit être renseigné");
         }
         if (!is_numeric($id) || $id < 0) {

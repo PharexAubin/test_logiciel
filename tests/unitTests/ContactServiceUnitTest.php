@@ -19,7 +19,8 @@ require __DIR__ . '/../../src/ContactService.php';
  *
  * @internal
  */
-final class ContactServiceUnitTest extends TestCase {
+final class ContactServiceUnitTest extends TestCase
+{
     private $contactService;
 
     public function __construct(string $name = null, array $data = [], $dataName = '') {
