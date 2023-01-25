@@ -12,7 +12,8 @@
 use PHPUnit\Framework\TestCase;
 
 use function PHPUnit\Framework\once;
-use src\ContactService;
+require"src\ContactService.php";
+
 
 /**
  * * @covers invalidInputException
@@ -36,19 +37,19 @@ final class ContactServiceIntegrationTest extends TestCase
     {
         $contactService = new ContactService();
         $contactService->deleteAllContact();
-        $this->assertEquals(0, $contactService->countContacts());
+        $this->assertEquals(0, $contactService->deleteAllContact());
     }
 
 
     public function testCreationContact()
     {
         $contactService = new ContactService();
-        $contactService->createContact("pascal", "victor");
+        $contactService->createContact("panmo", "aubin");
         //du principe que id_pascal=2
         if ($contactService->searchContact(2)) {
              $contact = $contactService->searchContact(2);
-             $this->assertEquals("pascal", $contact->getFirstName());
-             $this->assertEquals("victor", $contact->getLastName());
+             $this->assertEquals("pascal", $contactService->getFirstName());
+             $this->assertEquals("victor", $contactService->getLastName());
       
         } else {
             throw new InvalidArgumentException("l'utilisateur na pas ete cree");

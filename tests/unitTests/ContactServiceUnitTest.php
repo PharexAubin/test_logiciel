@@ -29,13 +29,7 @@ final class ContactServiceUnitTest extends TestCase
         $this->contactService = new ContactService();
     }
 
-    // //test Création Contact Sans Texte ok
-    // public function testCreationContactWithoutAnyText() {
-    //     $this->expectException(Exception::class);
-    //     $this->expectExceptionMessage("le nom  doit être renseigné");
-    //     $contactService = new ContactService();
-    //     $contactService->createContact(null,null);
-    // }
+   
 
     //test Création Contact Sans Prenom
     public function testCreationContactWithoutPrenom()
