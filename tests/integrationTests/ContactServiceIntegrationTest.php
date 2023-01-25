@@ -30,6 +30,7 @@ final class ContactServiceIntegrationTest extends TestCase
     {
         parent::__construct($name, $data, $dataName);
         $this->contactService = new ContactService();
+        
     }
 
     // test de suppression de toute les données, nécessaire pour nettoyer la bdd de tests à la fin
@@ -48,7 +49,7 @@ final class ContactServiceIntegrationTest extends TestCase
         if ($contactService->searchContact(2)) {
             throw new Exception("l'utilisateur a bien ete cree");
         } else {
-            throw new Exception("l'utilisateur na pas ete cree");
+            throw new InvalidArgumentException("l'utilisateur na pas ete cree");
         }
     }
 
