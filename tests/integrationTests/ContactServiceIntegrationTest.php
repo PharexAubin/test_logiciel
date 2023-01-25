@@ -56,7 +56,7 @@ final class ContactServiceIntegrationTest extends TestCase
     {
         $contactService = new ContactService();
         $contactService->searchContact(2);
-    }
+       
 
     public function testModifyContact()
     {
