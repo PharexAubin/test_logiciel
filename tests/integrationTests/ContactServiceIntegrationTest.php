@@ -46,11 +46,17 @@ final class ContactServiceIntegrationTest extends TestCase
         $contactService->createContact("pascal", "victor");
         //du principe que id_pascal=2
         if ($contactService->searchContact(2)) {
-            throw new InvalidArgumentException("l'utilisateur a bien ete cree");
+             $contact = $contactService->searchContact(2);
+             $this->assertEquals("pascal", $contact->getFirstName());
+             $this->assertEquals("victor", $contact->getLastName());
+      
         } else {
             throw new InvalidArgumentException("l'utilisateur na pas ete cree");
         }
     }
+
+           
+
 
     public function testSearchContact()
     {
@@ -64,6 +70,7 @@ final class ContactServiceIntegrationTest extends TestCase
     {
         $contactService = new ContactService();
         $contactService->createContact(2, "pascal", "victor");
+        $this->assertTrue($contactService->modifyContact(2, "pascal", "victor") instanceof ContactService);
     }
 
     public function testDeleteContact()
