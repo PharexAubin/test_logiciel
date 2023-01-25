@@ -12,7 +12,7 @@
  use InvalidInputException;
  
  define("ERROR_MESSAGE", "l'id doit être renseigné");
- define("notnull", "l'id doit être un entier non nul");
+ define("ENT_REQ", "l'id doit être un entier non nul");
 class ContactService
 
 { public $pdo;
@@ -41,7 +41,7 @@ class ContactService
             throw new invalidInputException(ERROR_MESSAGE);
         }
         if (!is_numeric($id) || $id < 0) {
-              throw new invalidInputException(notnull);
+              throw new invalidInputException(ENT_REQ);
         }
         $req = $this->pdo->query('SELECT * from contacts where id =' . $id);
 
@@ -130,7 +130,7 @@ class ContactService
             throw new invalidInputException(ERROR_MESSAGE);
         }
         if (!is_numeric($id) || $id < 0) {
-            throw new invalidInputException(notnull);
+            throw new invalidInputException(ENT_REQ);
         }
         if (empty($prenom) && !is_string($prenom)) {
             throw new invalidInputException('le prenom doit être renseigné');
@@ -155,7 +155,7 @@ class ContactService
             throw new invalidInputException(ERROR_MESSAGE);
         }
         if (!is_numeric($id) || $id < 0) {
-            throw new invalidInputException(notnull);
+            throw new invalidInputException(ENT_REQ);
         }
         $stmt = $this->pdo->prepare('DELETE from contacts where id=:id');
 
