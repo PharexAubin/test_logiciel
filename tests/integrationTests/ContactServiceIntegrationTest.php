@@ -10,8 +10,8 @@
  */
 
 use PHPUnit\Framework\TestCase;
+use src\ContactService;
 
-require __DIR__.'/../../src/ContactService.php';
 
 /**
  * * @covers invalidInputException
