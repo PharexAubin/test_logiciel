@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites/>
+<testsuites>
+  <testsuite name="ContactServiceUnitTest" file="C:\Users\HP\Documents\GitHub\test_logiciel\tests\unitTests\ContactServiceUnitTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="1" skipped="0" time="0.014581">
+    <testcase name="testModifyContactWithInvalidId" class="ContactServiceUnitTest" classname="ContactServiceUnitTest" file="C:\Users\HP\Documents\GitHub\test_logiciel\tests\unitTests\ContactServiceUnitTest.php" line="75" assertions="1" time="0.014581">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">ContactServiceUnitTest::testModifyContactWithInvalidId
+Failed asserting that exception of type "Exception" is thrown.</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -47,7 +47,7 @@ final class ContactServiceUnitTest extends TestCase
     }
 
     //test Création Contact Sans Prenom
-    public function testCreationContactWithoutNom()
+   public function testCreationContactWithoutNom()
     {
         $this->expectException(Exception::class);
         $this->expectExceptionMessage('le nom  doit être renseigné');
@@ -77,7 +77,7 @@ final class ContactServiceUnitTest extends TestCase
         $this->expectException(Exception::class);
         $this->expectExceptionMessage("l'id doit être un entier non nul");
         $contactService = new ContactService();
-        $contactService->UpdateContact(-5, "pascal", "loic");
+        $contactService->UpdateContact(5, "pascal", "loic");
     }
 
     //test Supprimer le contact avec le texte comme identifiant ok
@@ -89,4 +89,5 @@ final class ContactServiceUnitTest extends TestCase
         $contactService->deleteContact("zozo");
 
     }
+    
 }
