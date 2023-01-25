@@ -1,8 +1,5 @@
 <?php
 
-/*
- * require_once __DIR__.'/../src/contacts.php';
- */
 
 
 use  src\Contacts;
