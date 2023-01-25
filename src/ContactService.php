@@ -18,8 +18,7 @@ class ContactService
      * ContactService constructor.
      * Initialise la BDD
      */
-    public function __construct()
-    { $this->pdo = new PDO('sqlite:' . __DIR__ . '/contacts.sqlite');
+    public function __construct() { $this->pdo = new PDO('sqlite:' . __DIR__ . '/contacts.sqlite');
         $this->pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
