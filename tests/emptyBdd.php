@@ -2,7 +2,7 @@
 
 
 
-use  src\Contacts;
+use src\contatct;
 
 $contacts = new contactService();
 $contacts->init('contactsTest.sqlite');

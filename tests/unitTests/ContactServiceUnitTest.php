@@ -11,8 +11,8 @@
 
 use PHPUnit\Framework\TestCase;
 
-use src\ContactService;
 
+require"src\ContactService.php";
 /**
  * * @covers invalidInputException
  * @covers \ContactService
@@ -45,7 +45,7 @@ final class ContactServiceUnitTest extends TestCase
         $contactService = new ContactService();
         $contactService->createContact("wenji", null);
     }
-    
+
     //test Création Contact Sans Prenom
     public function testCreationContactWithoutNom()
     {
@@ -87,5 +87,6 @@ final class ContactServiceUnitTest extends TestCase
         $this->expectExceptionMessage("l'id doit être un entier non nul");
         $contactService = new ContactService();
         $contactService->deleteContact("zozo");
+
     }
 }

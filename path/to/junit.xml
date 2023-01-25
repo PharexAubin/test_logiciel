@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="ContactServiceUnitTest" file="C:\Users\HP\Documents\GitHub\test_logiciel\tests\unitTests\ContactServiceUnitTest.php" tests="6" assertions="6" errors="0" warnings="0" failures="6" skipped="0" time="0.004890">
+    <testcase name="testCreationContactWithoutPrenom" class="ContactServiceUnitTest" classname="ContactServiceUnitTest" file="C:\Users\HP\Documents\GitHub\test_logiciel\tests\unitTests\ContactServiceUnitTest.php" line="41" assertions="1" time="0.001003">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">ContactServiceUnitTest::testCreationContactWithoutPrenom
+Failed asserting that exception of type "Error" matches expected exception "Exception". Message was: "Class "InvalidInputException" not found" at
+C:\Users\HP\Documents\GitHub\test_logiciel\src\ContactService.php:107
+C:\Users\HP\Documents\GitHub\test_logiciel\tests\unitTests\ContactServiceUnitTest.php:46
+.</failure>
+    </testcase>
+    <testcase name="testCreationContactWithoutNom" class="ContactServiceUnitTest" classname="ContactServiceUnitTest" file="C:\Users\HP\Documents\GitHub\test_logiciel\tests\unitTests\ContactServiceUnitTest.php" line="50" assertions="1" time="0.001162">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">ContactServiceUnitTest::testCreationContactWithoutNom
+Failed asserting that exception of type "Error" matches expected exception "Exception". Message was: "Class "InvalidInputException" not found" at
+C:\Users\HP\Documents\GitHub\test_logiciel\src\ContactService.php:104
+C:\Users\HP\Documents\GitHub\test_logiciel\tests\unitTests\ContactServiceUnitTest.php:55
+.</failure>
+    </testcase>
+    <testcase name="testSearchContactWithNumber" class="ContactServiceUnitTest" classname="ContactServiceUnitTest" file="C:\Users\HP\Documents\GitHub\test_logiciel\tests\unitTests\ContactServiceUnitTest.php" line="58" assertions="1" time="0.000754">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">ContactServiceUnitTest::testSearchContactWithNumber
+Failed asserting that exception of type "Error" matches expected exception "Exception". Message was: "Class "InvalidInputException" not found" at
+C:\Users\HP\Documents\GitHub\test_logiciel\src\ContactService.php:68
+C:\Users\HP\Documents\GitHub\test_logiciel\tests\unitTests\ContactServiceUnitTest.php:63
+.</failure>
+    </testcase>
+    <testcase name="testSearchContactWithAnyText" class="ContactServiceUnitTest" classname="ContactServiceUnitTest" file="C:\Users\HP\Documents\GitHub\test_logiciel\tests\unitTests\ContactServiceUnitTest.php" line="66" assertions="1" time="0.000658">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">ContactServiceUnitTest::testSearchContactWithAnyText
+Failed asserting that exception of type "Error" matches expected exception "Exception". Message was: "Class "InvalidInputException" not found" at
+C:\Users\HP\Documents\GitHub\test_logiciel\src\ContactService.php:65
+C:\Users\HP\Documents\GitHub\test_logiciel\tests\unitTests\ContactServiceUnitTest.php:71
+.</failure>
+    </testcase>
+    <testcase name="testModifyContactWithInvalidId" class="ContactServiceUnitTest" classname="ContactServiceUnitTest" file="C:\Users\HP\Documents\GitHub\test_logiciel\tests\unitTests\ContactServiceUnitTest.php" line="75" assertions="1" time="0.000707">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">ContactServiceUnitTest::testModifyContactWithInvalidId
+Failed asserting that exception of type "Error" matches expected exception "Exception". Message was: "Class "InvalidInputException" not found" at
+C:\Users\HP\Documents\GitHub\test_logiciel\src\ContactService.php:133
+C:\Users\HP\Documents\GitHub\test_logiciel\tests\unitTests\ContactServiceUnitTest.php:80
+.</failure>
+    </testcase>
+    <testcase name="testDeleteContactWithTextAsId" class="ContactServiceUnitTest" classname="ContactServiceUnitTest" file="C:\Users\HP\Documents\GitHub\test_logiciel\tests\unitTests\ContactServiceUnitTest.php" line="84" assertions="1" time="0.000607">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">ContactServiceUnitTest::testDeleteContactWithTextAsId
+Failed asserting that exception of type "Error" matches expected exception "Exception". Message was: "Class "InvalidInputException" not found" at
+C:\Users\HP\Documents\GitHub\test_logiciel\src\ContactService.php:158
+C:\Users\HP\Documents\GitHub\test_logiciel\tests\unitTests\ContactServiceUnitTest.php:89
+.</failure>
+    </testcase>
+  </testsuite>
+</testsuites>
