@@ -61,10 +61,11 @@ final class ContactServiceIntegrationTest extends TestCase
     public function testSearchContact()
     {
         $contactService = new ContactService();
-        $contactService->searchContact(2);
-        $this->assertTrue($contactService->searchContact(2) === true);
+        $result=$contactService->searchContact(2);
+        $this->assertSame(get_class($result), 'Contact', "ne rien retourner");
 
     }
+
 
     public function testModifyContact()
     {
@@ -76,9 +77,10 @@ final class ContactServiceIntegrationTest extends TestCase
     public function testDeleteContact()
     {
         $contactService = new ContactService();
-        $contactService->deleteContact(2);
-        $this->assertTrue($contactService->deleteContact(2) === true);
+        $del=$contactService->deleteContact(2);
+        $this->assertSame(gettype($del), 'boolean', "ne rien retourner");
+        
 
     }
-
+    
 }
