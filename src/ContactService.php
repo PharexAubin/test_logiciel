@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
- USE src\invalidInputException;
+ use src\invalidInputException;
  
 
 class ContactService
