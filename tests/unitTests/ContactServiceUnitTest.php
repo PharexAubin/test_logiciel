@@ -37,8 +37,8 @@ final class ContactServiceUnitTest extends TestCase
     // }
 
     //test Création Contact Sans Prenom
-    public function testCreationContactWithoutPrenom() {
-        
+    public function testCreationContactWithoutPrenom()
+    { 
         $this->expectException(Exception::class);
         $this->expectExceptionMessage('le prenom doit être renseigné');
         $contactService = new ContactService();
@@ -46,14 +46,16 @@ final class ContactServiceUnitTest extends TestCase
     }
     
     //test Création Contact Sans Prenom
-    public function testCreationContactWithoutNom() {
+    public function testCreationContactWithoutNom()
+    {
         $this->expectException(Exception::class);
         $this->expectExceptionMessage('le nom  doit être renseigné');
         $contactService = new ContactService();
         $contactService->createContact(null,"pascal");
     }
     //test Rechercher un contact avec un numéro
-    public function testSearchContactWithNumber() {
+    public function testSearchContactWithNumber()
+    {
         $this->expectException(Exception::class);
         $this->expectExceptionMessage('search doit être une chaine de caractères');
         $contactService = new ContactService();
@@ -61,7 +63,7 @@ final class ContactServiceUnitTest extends TestCase
     }
     //test Rechercher un contactSans Texte ok
     public function testSearchContactWithAnyText()
-    {   
+    {
         $this->expectException(Exception::class);
         $this->expectExceptionMessage('search doit être renseigné');
         $contactService = new ContactService();
@@ -69,15 +71,17 @@ final class ContactServiceUnitTest extends TestCase
     }
 
     //ok
-    public function testModifyContactWithInvalidId() {
+    public function testModifyContactWithInvalidId()
+    {
         $this->expectException(Exception::class);
         $this->expectExceptionMessage("l'id doit être un entier non nul");
         $contactService = new ContactService();
-        $contactService->UpdateContact(-5,"pascal","loic");
+        $contactService->UpdateContact(-5, "pascal","loic");
     }
 
     //test Supprimer le contact avec le texte comme identifiant ok
-    public function testDeleteContactWithTextAsId() {
+    public function testDeleteContactWithTextAsId()
+    {
         $this->expectException(Exception::class);
         $this->expectExceptionMessage("l'id doit être un entier non nul");
         $contactService = new ContactService();
