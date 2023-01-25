@@ -11,7 +11,7 @@
 
  use InvalidInputException;
  
-
+ define("ERROR_MESSAGE", "l'id doit être renseigné");
 class ContactService
 
 { public $pdo;
@@ -37,7 +37,7 @@ class ContactService
     public function getContact($id)
   
         { if (empty($id)) {
-            throw new invalidInputException("l'id doit être renseigné");
+            throw new invalidInputException(ERROR_MESSAGE);
         }
         if (!is_numeric($id) || $id < 0) {
               throw new invalidInputException("l'id doit être un entier non nul");
@@ -126,7 +126,7 @@ class ContactService
         }
 
         if (empty($id)) {
-            throw new invalidInputException("l'id doit être renseigné");
+            throw new invalidInputException(ERROR_MESSAGE);
         }
         if (!is_numeric($id) || $id < 0) {
             throw new invalidInputException("l'id doit être un entier non nul");
@@ -151,7 +151,7 @@ class ContactService
      */
     public function deleteContact($id)
     {  if (null === $id) {
-            throw new invalidInputException("l'id doit être renseigné");
+            throw new invalidInputException(ERROR_MESSAGE);
         }
         if (!is_numeric($id) || $id < 0) {
             throw new invalidInputException("l'id doit être un entier non nul");
